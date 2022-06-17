@@ -1,10 +1,11 @@
 import React from 'react';
-import Spinner from '../Loading/Spinner';
+import Barchart from '../Charts/Barchart';
+// import Spinner from '../Loading/Spinner';
 
 const Home = () => {
     return (
         <div>
-            <Spinner></Spinner>
+            <Barchart></Barchart>
         </div>
     );
 };
