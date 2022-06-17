@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "sebok",
+        "post": "web developer",
+        "age": 22,
+        "city": "dhaka"
+    },
+    {
+        "id": 2,
+        "name": "akash",
+        "post": "front end developer",
+        "age": 29,
+        "city": "ahmedabad"
+    },
+    {
+        "id": 3,
+        "name": "dipjol",
+        "post": "back end developer",
+        "age": 32,
+        "city": "asam"
+    },
+    {
+        "id": 4,
+        "name": "rakhi",
+        "post": "web developer",
+        "age": 20,
+        "city": "mombai"
+    },
+    {
+        "id": 5,
+        "name": "bijoy",
+        "post": "front end developer",
+        "age": 38,
+        "city": "kalkata"
+    },
+    {
+        "id": 6,
+        "name": "susmita",
+        "post": "back end developer",
+        "age": 25,
+        "city": "cumilla"
+    },
+    {
+        "id": 7,
+        "name": "sabinoy",
+        "post": "full stack developer",
+        "age": 48,
+        "city": "coxbazar"
+    },
+    {
+        "id": 8,
+        "name": "sagorika",
+        "post": "web developer",
+        "age": 29,
+        "city": "dhaka"
+    },
+    {
+        "id": 9,
+        "name": "naim",
+        "post": "back end developer",
+        "age": 30,
+        "city": "chittagong"
+    },
+    {
+        "id": 10,
+        "name": "polash",
+        "post": "front end developer",
+        "age": 32,
+        "city": "dhaka"
+    }
+]
