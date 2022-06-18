@@ -1,14 +1,17 @@
 import React from 'react';
-import Barchart from '../Charts/Barchart';
-// import Linechart from '../Charts/Linechart';
-// import Spinner from '../Loading/Spinner';
+import { Outlet, NavLink } from 'react-router-dom';
+import './Home.css'
 
 const Home = () => {
     return (
-        <div>
-            <Barchart></Barchart>
-            {/* <Linechart></Linechart> */}
-        </div>
+        <div className='home-container'>
+            <nav className='navlink'>
+                <NavLink className={({ isActive }) => (isActive ? "active-link" : "normal-link")} to="/">Dashboard</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? "active-link" : "normal-link")} to="/listing">Listing</NavLink>
+
+            </nav>
+            <Outlet />
+        </div >
     );
 };
 

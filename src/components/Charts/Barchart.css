@@ -1,12 +1,18 @@
+.dashboard {
+    background-color: black;
+
+}
+
 .chart-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .chart h2 {
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
+    color: azure;
 }
 
 .chart {
@@ -22,5 +28,9 @@
 
     .chart {
         margin-top: 20px;
+    }
+
+    .dashboard {
+        width: fit-content;
     }
 }
