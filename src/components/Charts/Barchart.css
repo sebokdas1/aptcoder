@@ -1,5 +1,6 @@
 .dashboard {
     background-color: black;
+    width: 100%;
 
 }
 
@@ -16,7 +17,7 @@
 }
 
 .chart {
-    /* width: 85%; */
+
     margin-top: 10px;
     margin: 20px auto;
 }
@@ -28,6 +29,7 @@
 
     .chart {
         margin-top: 20px;
+
     }
 
     .dashboard {

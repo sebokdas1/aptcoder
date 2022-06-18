@@ -5,12 +5,17 @@ import './Home.css'
 const Home = () => {
     return (
         <div className='home-container'>
-            <nav className='navlink'>
-                <NavLink className={({ isActive }) => (isActive ? "active-link" : "normal-link")} to="/">Dashboard</NavLink>
-                <NavLink className={({ isActive }) => (isActive ? "active-link" : "normal-link")} to="/listing">Listing</NavLink>
+            <div className='container'>
+                <nav className='navlink'>
+                    <NavLink className={({ isActive }) => (isActive ? "active-link" : "normal-link")} to="/">Dashboard</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "active-link" : "normal-link")} to="/listing">Listing</NavLink>
 
-            </nav>
-            <Outlet />
+                </nav>
+                <Outlet />
+            </div>
+            <div>
+
+            </div>
         </div >
     );
 };

@@ -9,11 +9,14 @@ const Listing = () => {
             .then(res => res.json())
             .then(data => setEmployers(data))
     }, [])
+
     const handleSearch = (e) => {
         e.preventDefault()
         const name = e.target.name.value.toLowerCase();
         setEmployers(employers?.filter(a => a?.name === name))
     }
+
+    //filter by post
     const frontend = () => {
         setEmployers(employers.filter(e => e.post === 'front end developer'))
     }
@@ -26,6 +29,18 @@ const Listing = () => {
     const fullStack = () => {
         setEmployers(employers.filter(e => e.post === 'full stack developer'))
     }
+
+    //filter by age
+    const t20 = () => {
+        setEmployers(employers.filter(e => e.age < 30))
+    }
+    const t30 = () => {
+        setEmployers(employers.filter(e => e.age > 29 && e.age < 40))
+    }
+    const t40 = () => {
+        setEmployers(employers.filter(e => e.age > 39))
+    }
+
     return (
         <div className='listing-main'>
             <div className='form-container'>
@@ -34,9 +49,9 @@ const Listing = () => {
                     <input id='submit' type="submit" value="Search" />
                 </form>
             </div>
-
+            <h2>Filter By:</h2>
             <div className='filter'>
-                <h2>Filter By:</h2>
+
                 <div class="dropdown">
                     <button class="dropbtn">POST</button>
                     <div class="dropdown-content">
@@ -49,9 +64,9 @@ const Listing = () => {
                 <div class="dropdown">
                     <button class="dropbtn">AGE</button>
                     <div class="dropdown-content">
-                        <p >20 - 29</p>
-                        <p >30 - 39</p>
-                        <p >40 - 50</p>
+                        <p onClick={t20}>20 - 29</p>
+                        <p onClick={t30}>30 - 39</p>
+                        <p onClick={t40}>40 - 50</p>
                     </div>
                 </div>
 
