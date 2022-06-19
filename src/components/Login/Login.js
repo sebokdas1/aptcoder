@@ -21,7 +21,7 @@ const Login = () => {
 
     if (error) {
         errorMassage =
-            <p className='text-red-600'><small>{error?.message}</small></p>
+            <p className='text-error'><small>{error?.message}</small></p>
     }
 
     if (user) {
