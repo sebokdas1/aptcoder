@@ -4,41 +4,45 @@ import './Listing.css'
 
 const Listing = () => {
     const [employers, setEmployers] = useState([])
+    const [employ, setEmploy] = useState([])
     useEffect(() => {
         fetch('employer.json')
             .then(res => res.json())
-            .then(data => setEmployers(data))
+            .then(data => {
+                setEmployers(data)
+                setEmploy(data)
+            })
     }, [])
 
     const handleSearch = (e) => {
         e.preventDefault()
         const name = e.target.name.value.toLowerCase();
-        setEmployers(employers?.filter(a => a?.name === name))
+        setEmploy(employers?.filter(a => a?.name === name))
     }
 
     //filter by post
     const frontend = () => {
-        setEmployers(employers.filter(e => e.post === 'front end developer'))
+        setEmploy(employers.filter(e => e.post === 'front end developer'))
     }
     const backend = () => {
-        setEmployers(employers.filter(e => e.post === 'back end developer'))
+        setEmploy(employers.filter(e => e.post === 'back end developer'))
     }
     const web = () => {
-        setEmployers(employers.filter(e => e.post === 'web developer'))
+        setEmploy(employers.filter(e => e.post === 'web developer'))
     }
     const fullStack = () => {
-        setEmployers(employers.filter(e => e.post === 'full stack developer'))
+        setEmploy(employers.filter(e => e.post === 'full stack developer'))
     }
 
     //filter by age
     const t20 = () => {
-        setEmployers(employers.filter(e => e.age < 30))
+        setEmploy(employers.filter(e => e.age < 30))
     }
     const t30 = () => {
-        setEmployers(employers.filter(e => e.age > 29 && e.age < 40))
+        setEmploy(employers.filter(e => e.age > 29 && e.age < 40))
     }
     const t40 = () => {
-        setEmployers(employers.filter(e => e.age > 39))
+        setEmploy(employers.filter(e => e.age > 39))
     }
 
     return (
@@ -52,18 +56,18 @@ const Listing = () => {
             <h2>Filter By:</h2>
             <div className='filter'>
 
-                <div class="dropdown">
-                    <button class="dropbtn">POST</button>
-                    <div class="dropdown-content">
+                <div className="dropdown">
+                    <button className="dropbtn">POST</button>
+                    <div className="dropdown-content">
                         <p onClick={frontend}>Frontend</p>
                         <p onClick={backend}>Backend</p>
                         <p onClick={web}>Web</p>
                         <p onClick={fullStack}>FullStack</p>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn">AGE</button>
-                    <div class="dropdown-content">
+                <div className="dropdown">
+                    <button className="dropbtn">AGE</button>
+                    <div className="dropdown-content">
                         <p onClick={t20}>20 - 29</p>
                         <p onClick={t30}>30 - 39</p>
                         <p onClick={t40}>40 - 50</p>
@@ -80,7 +84,7 @@ const Listing = () => {
                         <th>City</th>
                     </tr>
                     {
-                        employers?.map(employe => <tr key={employe?.id}>
+                        employ?.map(employe => <tr key={employe?.id}>
                             <td>{employe?.name?.toUpperCase()}</td>
                             <td>{employe?.post?.toUpperCase()}</td>
                             <td>{employe?.age}</td>

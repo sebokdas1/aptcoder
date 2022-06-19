@@ -14,7 +14,7 @@ const Barchart = () => {
         <div className='dashboard'>
             <div className='chart-container'>
                 <div className='chart'>
-                    <BarChart width={500} height={250} data={data}>
+                    <BarChart width={320} height={250} data={data}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="month" />
                         <YAxis />
@@ -25,7 +25,7 @@ const Barchart = () => {
                 </div>
 
                 <div className='chart'>
-                    <PieChart width={500} height={250}>
+                    <PieChart width={320} height={250}>
                         <Pie data={data} dataKey="sell" nameKey="month" cx="50%" cy="50%" outerRadius={50} fill="Turquoise" />
                         <Pie data={data} dataKey="sell" nameKey="month" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
                         <Tooltip />
@@ -34,7 +34,7 @@ const Barchart = () => {
                 </div>
 
                 <div className='chart'>
-                    <LineChart width={500} height={250} data={data}
+                    <LineChart width={320} height={250} data={data}
                         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="month" />
@@ -46,7 +46,7 @@ const Barchart = () => {
                 </div>
 
                 <div className='chart'>
-                    <ComposedChart width={500} height={250} data={data}>
+                    <ComposedChart width={320} height={250} data={data}>
                         <XAxis dataKey="month" />
                         <YAxis />
                         <Tooltip />

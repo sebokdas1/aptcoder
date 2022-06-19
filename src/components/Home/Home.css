@@ -1,18 +1,14 @@
-/* .home-container {
-    width: 100%;
-} */
 .container {
     width: 100%;
+
 }
 
 .navlink {
-    /* background-color: whitesmoke; */
     padding: 20px 0;
     margin-bottom: 0;
     text-align: center;
     border-bottom: 1px solid wheat;
-    /* width: fit-content; */
-
+    background-color: black;
 }
 
 .navlink a {
@@ -41,7 +37,7 @@
 }
 
 .normal-link:hover {
-    background-color: orange;
+    background-color: gray;
     color: rgb(223, 220, 220);
 }
 
@@ -49,9 +45,7 @@
 
 @media only screen and (max-width:576px) {
 
-    /* .navlink {
-        width: 100%;
-    } */
+
     .container {
         width: 100%;
     }

@@ -1,7 +1,6 @@
 .dashboard {
     background-color: black;
     width: 100%;
-
 }
 
 .chart-container {
@@ -22,6 +21,8 @@
     margin: 20px auto;
 }
 
+
+
 @media only screen and (max-width:576px) {
     .chart-container {
         grid-template-columns: repeat(1, 1fr);
@@ -29,7 +30,6 @@
 
     .chart {
         margin-top: 20px;
-
     }
 
     .dashboard {
